@@ -1,0 +1,23 @@
+<h1>All Bookings</h1>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>User</th>
+      <th>Cleaner</th>
+      <th>Confirmation</th>
+      <!-- Add more columns as needed -->
+    </tr>
+  </thead>
+  <tbody>
+    <% @bookings.each do |booking| %>
+      <tr>
+        <td><%= booking.id %></td>
+        <td><%= booking.user.name %></td>
+        <td><%= booking.cleaner.name %></td>
+        <td><%= booking.confirmed ? 'Confirmed' : 'Pending' %></td>
+        <!-- Display other attributes as needed -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
