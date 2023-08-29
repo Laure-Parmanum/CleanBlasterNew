@@ -31,8 +31,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_26_104813) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "service_id", null: false
-    t.index ["service_id"], name: "index_categories_on_service_id"
   end
 
   create_table "services", force: :cascade do |t|
@@ -59,7 +57,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_26_104813) do
 
   add_foreign_key "bookings", "services"
   add_foreign_key "bookings", "users"
-  add_foreign_key "categories", "services"
   add_foreign_key "services", "categories"
   add_foreign_key "services", "users"
 end

@@ -3,10 +3,11 @@ Rails.application.routes.draw do
   root to: "pages#home"
   resources :categories, only: :index
   # get 'services/:id', to: 'services#show'
-  resources :services, only: [:show, :index]
-  resources :bookings, only: [:new, :create, :index]
+  resources :services, only: [:show, :index] do
+    resources :bookings, only: [:new, :index, :create, :show]
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
+  resources :bookings, only: [:destroy]
   # Defines the root path route ("/")
   # root "articles#index"
 end
