@@ -13,9 +13,14 @@
     <% @bookings.each do |booking| %>
       <tr>
         <td><%= booking.id %></td>
-        <td><%= booking.user.name %></td>
-        <td><%= booking.cleaner.name %></td>
-        <td><%= booking.confirmed ? 'Confirmed' : 'Pending' %></td>
+        <td><%= booking.name %></td>
+        <td><%= booking.service.rate %></td>
+        <td>
+          <%= link_to "Delete",
+            booking_path(booking),
+            data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+          %>
+        </td>
         <!-- Display other attributes as needed -->
       </tr>
     <% end %>
