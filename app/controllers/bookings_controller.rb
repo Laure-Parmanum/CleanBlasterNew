@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   def index
-    @bookings = Booking.all
+    @bookings = Booking.where(user_id: current_user.id)
+    @other_bookings = Booking.all.where.not(user_id: current_user.id)
   end
 
   def new
@@ -19,6 +20,18 @@ class BookingsController < ApplicationController
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
+    redirect_to bookings_path
+  end
+
+  def confirm
+    @booking = Booking.find(params[:id])
+    @booking.update(status: "confirmed")
+    redirect_to bookings_path
+  end
+
+  def decline
+    @booking = Booking.find(params[:id])
+    @booking.update(status: "rejected")
     redirect_to bookings_path
   end
 
