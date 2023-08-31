@@ -1,4 +1,3 @@
 <% @categories.each do |category|%>
-  <li><%= category.description%></li>
+  <%= link_to category.description, service_path(category)%>
 <% end %>
-<%= link_to 'Categories', categories_path%>
