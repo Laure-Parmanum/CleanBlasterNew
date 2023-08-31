@@ -1,6 +1,6 @@
 class ServicesController < ApplicationController
   def show
-    @service = service.find(params[:id])
+    @services = Service.where(category_id: params[:id])
   end
 
   def index
