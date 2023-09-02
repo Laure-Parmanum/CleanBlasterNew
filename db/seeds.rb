@@ -27,7 +27,7 @@ user3 = User.create(email: 'smith@example.com', password: 'password123')
  #services
  Service.create(rate: 1500 , user: user1 , category: category1, name: "Regular Cleaning"  , description: "Deep clean your home")
  Service.create(rate: 2000 , user: user1, category: category1, name: "Deep Cleaning" , description: "Weekly Cleaning")
- Service.create(rate: 1500 , user: user1, category: category1, name: "Gardening" , description: "Backyard Frontyard")
+ Service.create(rate: 1500 , user: user1, category: category1, name: "Laundry" , description: "We take care of your laundry")
  Service.create(rate: 7000 , user: user1, category: category2, name: "Window cleaning" , description: "Clean your office windows")
  Service.create(rate: 7000, user: user1, category: category2, name: "Office Floor cleaning" , description: "Professional office floors cleaning")
  Service.create(rate: 10000, user: user1, category: category3, name: "Post Construction cleaning" , description: "Professional office floors cleaning")
