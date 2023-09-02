@@ -1,0 +1,23 @@
+<div class="container">
+  <%= @category.description %>
+
+  <% @services.each do |service| %>
+
+
+      <div class="card-product">
+        <img src="https://www.worldsupporter.org/en/system/files/555-610.png"/>
+        <div class="card-product-infos">
+          <h2><%= service.name%></h2>
+          <p> Rs <%= service.rate%></p>
+          <p> <%=service.description %><strong>click to learn more about the service</strong>.</p>
+          <%= link_to 'Bookings', new_service_booking_path(service) %>
+        </div>
+      </div>
+
+
+
+
+  <% end %>
+
+
+</div>

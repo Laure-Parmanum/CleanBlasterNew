@@ -1,6 +1,7 @@
 class ServicesController < ApplicationController
   def show
-    @services = Service.where(category_id: params[:id]).where.not(user_id: current_user.id)
+    @services = Service.all
+    @service = Service.find(params[:id])
   end
 
 
