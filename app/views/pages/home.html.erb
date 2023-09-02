@@ -1,5 +1,5 @@
 <% @categories.each do |category|%>
-  <%= link_to category.description, service_path(category)%>
+  <%= link_to category.description, category_path(category)%>
 <% end %>
 
 <div class="features-section-container">

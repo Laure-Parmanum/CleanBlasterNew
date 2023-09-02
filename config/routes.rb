@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
-  resources :categories, only: :index
+  resources :categories, only: [:show, :index]
   # get 'services/:id', to: 'services#show'
   resources :services, only: [:show, :index] do
     resources :bookings, only: [:new, :create, :show]
