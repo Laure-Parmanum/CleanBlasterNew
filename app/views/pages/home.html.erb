@@ -1,41 +1,54 @@
-<% @categories.each do |category|%>
-  <%= link_to category.description, category_path(category)%>
-<% end %>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('<%= image_path( 'banner.jpeg') %>');">
+  <div class="container">
+    <h1>Welcome to CleanBaster.</h1>
+    <p>Your trusted partner for professional cleaning services, making your space shine</p>
+  </div>
+</div>
 
 <div class="features-section-container">
 <div class="features-section">
 
   <%= image_tag('ndis.jpeg') %>
 
-    <h2>Feature 1</h2>
-    <p>Discover our amazing feature 1.</p>
-    <span class="icon fa fa-star"></span>
+   <% if @categories.any? %>
+      <p><%= link_to "House Cleaning", service_path(@services.first) %></p>
+    <% end %>
+    <p>Discover the ultimate in home hygiene with our meticulous house cleaning services. Your sanctuary, our expertise!.</p>
+
+
   </div>
 
 <div class="features-section">
 
-  <%= image_tag('deep cleaning.jpeg') %>
-    <h2>Feature 2</h2>
-    <p>Discover our amazing feature 2.</p>
-    <span class="icon fa fa-star"></span>
+  <%= image_tag('landscaping.jpeg') %>
+    <% if @categories.any? %>
+      <p><%= link_to "Landscaping", service_path(@services[1]) %></p>
+    <% end %>
+    <p>Elevate your outdoor oasis with our premier landscaping cleaning services. Unleash the true beauty of your yard!</p>
+
   </div>
 
 <div class="features-section">
 
   <%= image_tag('construction.jpeg') %>
-    <h2>Feature 3</h2>
-    <p>Discover our amazing feature 3.</p>
-    <span class="icon fa fa-star"></span>
+    <% if @categories.any? %>
+      <p><%= link_to "Construction", service_path(@services[2]) %></p>
+    <% end %>
+    <p>Transforming construction chaos into pristine spaces.Our construction cleaning team delivers excellence in every detail.</p>
+
   </div>
 
 <div class="features-section">
 
-<%= image_tag('landscaping.jpeg') %>
+<%= image_tag('deep cleaning.jpeg') %>
 
-    <h2>Feature 3</h2>
-    <p>Discover our amazing feature 4.</p>
-    <span class="icon fa fa-star"></span>
+    <% if @categories.any? %>
+      <p><%= link_to "Office", service_path(@services[3]) %></p>
+    <% end %>
+    <p>Elevate workplace hygiene and productivity with our top-tier office cleaning solutions.
+     Your success, our cleanliness commitment.</p>
+
   </div>
-
 
 </div>
