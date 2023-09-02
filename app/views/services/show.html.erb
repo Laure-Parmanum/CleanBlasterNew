@@ -1,7 +1,7 @@
 <p>Browse to learn more about the services we offer!</p>
 <%= @service.name %>
 <% if current_page?(controller: "services", action: "show", id: "1") %>
-  <% @services.where(category_id: 5).each do |service| %>
+  <% @services.where(category_id: 1).each do |service| %>
     <div class="card-product">
       <img src="https://magictouchsd.com/wp-content/uploads/2019/10/professional-laundry-service-1200x480.jpg"/>
       <div class="card-product-infos">
@@ -14,7 +14,7 @@
   <% end %>
 <% end %>
 <% if current_page?(controller: "services", action: "show", id: "2") %>
-  <% @services.where(category_id: 6).each do |service| %>
+  <% @services.where(category_id: 2).each do |service| %>
     <div class="card-product">
       <img src="https://magictouchsd.com/wp-content/uploads/2019/10/professional-laundry-service-1200x480.jpg"/>
       <div class="card-product-infos">
@@ -27,7 +27,7 @@
   <% end %>
 <% end %>
 <% if current_page?(controller: "services", action: "show", id: "3") %>
-  <% @services.where(category_id: 7).each do |service| %>
+  <% @services.where(category_id: 3).each do |service| %>
     <div class="card-product">
       <img src="https://magictouchsd.com/wp-content/uploads/2019/10/professional-laundry-service-1200x480.jpg"/>
       <div class="card-product-infos">
@@ -40,7 +40,7 @@
   <% end %>
 <% end %>
 <% if current_page?(controller: "services", action: "show", id: "4") %>
-  <% @services.where(category_id: 8).each do |service| %>
+  <% @services.where(category_id: 4).each do |service| %>
     <div class="card-product">
       <img src="https://magictouchsd.com/wp-content/uploads/2019/10/professional-laundry-service-1200x480.jpg"/>
       <div class="card-product-infos">
