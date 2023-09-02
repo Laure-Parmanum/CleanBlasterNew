@@ -1,2 +1,18 @@
 <h1>Categories all</h1>
 <%= link_to 'services', services_path%>
+<div class="container">
+    <h1>Our service categories</h1>
+    <p>Browse to learn more about the services we offer!</p>
+    <% @services.each do |service| %>
+    <div class="card-product">
+      <img src="https://magictouchsd.com/wp-content/uploads/2019/10/professional-laundry-service-1200x480.jpg"/>
+      <div class="card-product-infos">
+        <h2>Laundry Service</h2>
+        <p><%= service.rate %></p>
+        <p>Get your Laundry sorted! <strong>Click to learn more about the service</strong>.</p>
+        <%= link_to 'Bookings', new_service_booking_path(service) %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+<% end %>

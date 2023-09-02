@@ -1,0 +1,68 @@
+$font-family: Arial, sans-serif;
+$primary-color: #007bff;
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: $font-family;
+}
+// Headings
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+// Paragraphs
+p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+Card styles
+.card-product {
+  // display: flex;
+  // margin-bottom: 20px;
+  // border: 1px solid #ccc;
+  // border-radius: 5px;
+  // overflow: hidden;
+  // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .card-product-infos {
+    flex: 1;
+    padding: 10px;
+    background-color: #f8f8f8;
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+
+    a {
+      display: inline-block;
+      padding: 8px 12px;
+      background-color: $primary-color;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: darken($primary-color, 20%);
+      }
+    }
+  }
+}

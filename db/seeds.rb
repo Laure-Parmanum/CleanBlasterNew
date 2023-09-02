@@ -6,19 +6,26 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+# Destroy the database
+Booking.destroy_all
+Service.destroy_all
+Category.destroy_all
+User.destroy_all
+
+
 # Create Users
-User.create(email: 'john@example.com', password: 'password123')
-User.create(email: 'jpaul@example.com', password: 'password123')
-User.create(email: 'smith@example.com', password: 'password123')
+user1 = User.create(email: 'john@example.com', password: 'password123')
+user2 = User.create(email: 'jpaul@example.com', password: 'password123')
+user3 = User.create(email: 'smith@example.com', password: 'password123')
 
 # category
- Category.create(description: "House Cleaning")
- Category.create(description: "Office")
- Category.create(description: "Construction")
- Category.create(description: "landscaping")
+ category1 = Category.create(description: "House Cleaning")
+ category2 = Category.create(description: "Office")
+ category3 = Category.create(description: "Construction")
+ category3 = Category.create(description: "landscaping")
 
  #services
- Service.create(rate: 50 , user_id:1 , category_id: 1, name: "Regular Cleaning"  , description: "Deep clean your home")
- Service.create(rate: 60 , user_id:2 , category_id: 1, name: "Deep Cleaning" , description: "Weekly Cleaning")
- Service.create(rate: 60 , user_id:2 , category_id: 2, name: "Gardening" , description: "Backyard Frontyard")
- Service.create(rate: 60 , user_id:2 , category_id: 3, name: "Window cleaning" , description: "Clean your office windows")
+ Service.create(rate: 50 , user: user1 , category: category1, name: "Regular Cleaning"  , description: "Deep clean your home")
+ Service.create(rate: 60 , user: user1, category: category1, name: "Deep Cleaning" , description: "Weekly Cleaning")
+ Service.create(rate: 60 , user: user1, category: category1, name: "Gardening" , description: "Backyard Frontyard")
+ Service.create(rate: 60 , user: user1, category: category2, name: "Window cleaning" , description: "Clean your office windows")
