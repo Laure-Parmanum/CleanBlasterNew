@@ -1,9 +1,3 @@
-<% @categories.each do |category|%>
-  <%= link_to category.description, service_path(category)%>
-<% end %>
-
-
-
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('<%= image_path( 'banner.jpeg') %>');">
   <div class="container">
     <h1>Welcome to CleanBaster.</h1>
@@ -19,7 +13,7 @@
    <% if @categories.any? %>
       <p><%= link_to "House Cleaning", service_path(@services.first) %></p>
     <% end %>
-    <p>Discover our amazing feature 1.</p>
+    <p>Discover the ultimate in home hygiene with our meticulous house cleaning services. Your sanctuary, our expertise!.</p>
 
 
   </div>
@@ -30,7 +24,7 @@
     <% if @categories.any? %>
       <p><%= link_to "Landscaping", service_path(@services[1]) %></p>
     <% end %>
-    <p>Discover our amazing feature 2.</p>
+    <p>Elevate your outdoor oasis with our premier landscaping cleaning services. Unleash the true beauty of your yard!</p>
 
   </div>
 
@@ -40,7 +34,7 @@
     <% if @categories.any? %>
       <p><%= link_to "Construction", service_path(@services[2]) %></p>
     <% end %>
-    <p>Discover our amazing feature 3.</p>
+    <p>Transforming construction chaos into pristine spaces.Our construction cleaning team delivers excellence in every detail.</p>
 
   </div>
 
@@ -51,7 +45,8 @@
     <% if @categories.any? %>
       <p><%= link_to "Office", service_path(@services[3]) %></p>
     <% end %>
-    <p>Discover our amazing feature 4.</p>
+    <p>Elevate workplace hygiene and productivity with our top-tier office cleaning solutions.
+     Your success, our cleanliness commitment.</p>
 
   </div>
 
