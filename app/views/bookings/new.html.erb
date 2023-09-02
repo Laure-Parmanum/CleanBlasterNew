@@ -1,7 +1,9 @@
-<%= simple_form_for [@service, @booking] do |f| %>
-  <%= f.input :name %>
-  <%= f.input :home_add %>
-  <%= f.input :num %>
- <%= f.input :date %>
-  <%= f.submit %>
-  <% end %>
+<div class="container">
+  <%= simple_form_for [@service, @booking] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :home_add %>
+    <%= f.input :num %>
+  <%= f.input :date, {html5: true} %>
+    <%= f.submit %>
+    <% end %>
+</div>
